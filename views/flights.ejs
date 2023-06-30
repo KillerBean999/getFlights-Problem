@@ -1,0 +1,92 @@
+<!-- flights.ejs -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #DCEBF9;
+            /* Light blue */
+        }
+
+        h1 {
+            text-align: center;
+            color: #1171A2;
+            /* Dark blue */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #F5FAFF;
+            /* Pale blue */
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #1171A2;
+            /* Dark blue */
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #EDF5FF;
+            /* Light blue */
+        }
+
+        tr:hover {
+            background-color: #C4E1FF;
+            /* Hover effect */
+        }
+    </style>
+    <title>Flights</title>
+
+<div class=flights>
+    <% if (typeof flights !=='undefined' && flights) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Flight ID</th>
+                    <th>Airline Company ID</th>
+                    <th>Origin Country</th>
+                    <th>Destination Country</th>
+                    <th>Landing Time</th>
+                    <th>Departure Time</th>
+                    <th>Remaining Tickets</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% flights.forEach((flights)=> { %>
+                    <tr>
+                        <td><%= flights.id %></td>
+                        <td>
+                            <%= flights.airline_company_id %>
+                        </td>
+                        <td>
+                            <%= flights.origin_country_id %>
+                        </td>
+                        <td>
+                            <%= flights.destination_country_id %>
+                        </td>
+                        <td>
+                            <%= flights.departure_time %>
+                        </td>
+                        <td>
+                            <%= flights.landing_time %>
+                        </td>
+                        <td>
+                            <%= flights.remaining_tickets %>
+                        </td>
+                       
+                        <td><button>update</button></td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+        <% } else {%>
+            <h3>there is no airlines to show</h3>
+            <% } %>
+</div>

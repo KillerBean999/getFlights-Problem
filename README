@@ -1,0 +1,29 @@
+----------------------customer section----------------------
+
+(btn)show all flights aviable / getAllFlights
+(btn)choose a flight / getFlightById / save flight id with cookies
+(btn)adding new customer / addCustomer + flight id cookies
+(server)save both datas to tickets / addTicket
+(server)display customer details / TicketId + CustomerId + FlightId
+
+----------------------customer section----------------------
+
+------------------------admin section-----------------------
+
+(btn)show all flights aviable / getAllFlights[
+near each flight these options:
+updateFlight
+addFlight
+deleteFlight
+]
+
+(btn)show all customers aviable / getAllCustomers[
+near each flight these options:
+updateCustomers
+addCustomers
+deleteFCustomers
+]
+
+(btn)want to join the team? / addAdmin
+
+------------------------admin section-----------------------

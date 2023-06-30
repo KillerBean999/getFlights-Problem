@@ -1,0 +1,42 @@
+<style>
+#hero {
+  background-image: url(/img/pexels-sheila-731217.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+
+#hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #87ceeb; /* Blue sky color */
+  opacity: 0.5;
+  z-index: -1;
+}
+
+#hero h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #4169e1; /* Blue sea color */
+  animation: text_reveal_box 1s ease;
+  animation-delay: 1s;
+}
+
+</style>
+    <section id="hero">
+        <div class="hero container">
+            <div>
+                <h1>Fly with our top flights<span></span></h1>
+                <h1>Known for top Services<span></span></h1>
+                <h1>And Enjoy! <span></span></h1>
+            </div>
+        </div>
+    </section>
